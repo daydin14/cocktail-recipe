@@ -1,4 +1,4 @@
-const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+const randomUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 const $form = $("form");
 const $drinkName = $("#drink");
@@ -8,21 +8,15 @@ const $image = $("#image");
 
 $form.on("submit", getData);
 
+// Function to connect to api and get a random drink and display it once a form is submitted
 function getData(event) {
   event.preventDefault();
 //   const userInput = $input.val();
-  $.ajax(url).then(
+  $.ajax(randomUrl).then(
     function (data) {
-      console.log("Drinks!");
-
       $drinkName.text(data.drinks[0].strDrink);
-      console.log($drinkName)
-
       $instructions.text(data.drinks[0].strInstructions);
-      console.log($instructions)
-
       $image.attr("src", data.drinks[0].strDrinkThumb);
-      console.log(data);
     },
     function (error) {
       console.log("Something is wrong");
