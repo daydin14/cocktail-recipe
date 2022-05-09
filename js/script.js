@@ -1,4 +1,4 @@
-const url = "www.thecocktaildb.com/api/json/v1/1/random.php";
+const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 const $form = $("form");
 const $drinkName = $("#drink");
@@ -10,13 +10,15 @@ $form.on("submit", getData);
 
 function getData(event) {
   event.preventDefault();
-
+//   const userInput = $input.val();
   $.ajax(url).then(
     function (data) {
       console.log("Drinks!");
-      $drinkName.text(data.strDrink);
-      $instructions.text(data.strInstructions);
-      $image.attr("src", data.strDrinkThumb);
+      $drinkName.text(data.drinks.strDrink);
+      console.log($drinkName)
+      $instructions.text(data.drinks.strInstructions);
+      console.log($instructions)
+      $image.attr("src", data.drinks.strDrinkThumb);
       console.log(data);
     },
     function (error) {

@@ -7,22 +7,24 @@
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
+      crossorigin="anonymous" 
+      defer
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/script.js" defer></script>
-    <title>Document</title>
+    <title>Cocktail Drinks</title>
   </head>
   <body>
       <main>
           <h3>Drink:</h3>
-          <p class="drink"></p>
-          <p class="instructions"></p>
-          <img class="image">
+          <p id="drink"></p>
+          <p id="instructions"></p>
+          <img id="image">
       </main>
       <form>
           <input type="text" placeholder="Search Drink"/>
           <input type="submit" value="Get Drink"/>
+          <input type="submit" value="Get Random Drink"/>
       </form>
   </body>
 </html>
