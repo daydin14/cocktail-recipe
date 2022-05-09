@@ -4,6 +4,7 @@ const $form = $("form");
 const $drinkName = $("#drink");
 const $instructions = $("#instructions");
 const $image = $("#image");
+// const $input = $(`input[type="text"]`);
 
 $form.on("submit", getData);
 
