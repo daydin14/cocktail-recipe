@@ -14,11 +14,14 @@ function getData(event) {
   $.ajax(url).then(
     function (data) {
       console.log("Drinks!");
-      $drinkName.text(data.drinks.strDrink);
+
+      $drinkName.text(data.drinks[0].strDrink);
       console.log($drinkName)
-      $instructions.text(data.drinks.strInstructions);
+
+      $instructions.text(data.drinks[0].strInstructions);
       console.log($instructions)
-      $image.attr("src", data.drinks.strDrinkThumb);
+
+      $image.attr("src", data.drinks[0].strDrinkThumb);
       console.log(data);
     },
     function (error) {
