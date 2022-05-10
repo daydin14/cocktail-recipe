@@ -35,6 +35,7 @@ var menu = [
 ];
 
 const topMenuEl = document.getElementById("menu-bar");
+topMenuEl.style.height = "100%";
 topMenuEl.style.backgroundColor = "skyblue"
 topMenuEl.classList.add("flex-around");
 

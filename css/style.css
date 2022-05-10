@@ -7,6 +7,19 @@ html, body {
 }
 .flex-around {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+}
+#menu-bar button:hover{
+    background-color: fuchsia;
+}
+#menu-bar {
+    position: relative;
+}
+nav button {
+    height: 50px;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: orange;
 }
