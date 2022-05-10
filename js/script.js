@@ -24,3 +24,23 @@ function getData(event) {
     }
   );
 }
+
+// Top Menu Buttons:
+var menu = [
+  { text: "Home"},
+  { text: "Random Drink"},
+  { text: "Liquor Choice"},
+  { text: "Search Drink"},
+  { text: "All Drinks"},
+];
+
+const topMenuEl = document.getElementById("menu-bar");
+topMenuEl.style.backgroundColor = "skyblue"
+topMenuEl.classList.add("flex-around");
+
+for (let i of menu) {
+  let bEl = document.createElement("button");
+  bEl.setAttribute("submit", menu);
+  bEl.textContent = i.text;
+  topMenuEl.append(bEl);
+}
