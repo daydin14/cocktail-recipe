@@ -16,18 +16,22 @@
   </head>
   <body>
     <header>
-      <nav id="menu-bar"></nav>
+      <nav id="menu-bar">
+        <button id="home">Home</button>
+        <button id="rand">Random Drink</button>
+        <button id="search">Search Drink</button>
+        <button id="all">All Drinks</button>
+      </nav>
     </header>
       <main>
           <h3>Drink:</h3>
+          <img id="image" max-width="50px">
           <p id="drink"></p>
           <p id="instructions"></p>
-          <img id="image">
       </main>
       <form>
           <input type="text" placeholder="Search Drink"/>
-          <input type="submit" value="Get Drink"/>
-          <input type="submit" value="Get Random Drink"/>
+          <input type="submit" value="Find Drink"/>
       </form>
   </body>
 </html>

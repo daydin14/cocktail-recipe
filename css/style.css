@@ -18,9 +18,8 @@ html, body {
 #menu-bar {
     position: relative;
     width: 500px;
-    height: 400px;
+    height: 50px;
     margin: auto;
-    /* background-image: url("https://images.pexels.com/photos/3566120/pexels-photo-3566120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); */
 }
 nav button {
     height: 50px;
