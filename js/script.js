@@ -1,10 +1,32 @@
+// Top Menu Buttons:
+var menu = [
+  { text: "Home"},
+  { text: "Random Drink"},
+  { text: "Liquor Choice"},
+  { text: "Search Drink"},
+  { text: "All Drinks"},
+];
+
+const topMenuEl = document.getElementById("menu-bar");
+topMenuEl.style.height = "100%";
+//topMenuEl.style.backgroundColor = '<img src="https://images.pexels.com/photos/3566120/pexels-photo-3566120.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">'
+topMenuEl.classList.add("flex-around");
+
+for (let i of menu) {
+  let bEl = document.createElement("button");
+  bEl.setAttribute("submit", menu);
+  bEl.textContent = i.text;
+  topMenuEl.append(bEl);
+}
+
+// Ajax random cocktail drink:
 const randomUrl = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
 const $form = $("form");
 const $drinkName = $("#drink");
 const $instructions = $("#instructions");
 const $image = $("#image");
-// const $input = $(`input[type="text"]`);
+const $input = $(`input[type="text"]`);
 
 $form.on("submit", getData);
 
@@ -25,23 +47,3 @@ function getData(event) {
   );
 }
 
-// Top Menu Buttons:
-var menu = [
-  { text: "Home"},
-  { text: "Random Drink"},
-  { text: "Liquor Choice"},
-  { text: "Search Drink"},
-  { text: "All Drinks"},
-];
-
-const topMenuEl = document.getElementById("menu-bar");
-topMenuEl.style.height = "100%";
-topMenuEl.style.backgroundColor = "skyblue"
-topMenuEl.classList.add("flex-around");
-
-for (let i of menu) {
-  let bEl = document.createElement("button");
-  bEl.setAttribute("submit", menu);
-  bEl.textContent = i.text;
-  topMenuEl.append(bEl);
-}
