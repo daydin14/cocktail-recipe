@@ -26,7 +26,10 @@ const $form = $("form");
 const $drinkName = $("#drink");
 const $instructions = $("#instructions");
 const $image = $("#image");
+
+
 const $input = $(`input[type="text"]`);
+const $menuButton = $();
 
 $form.on("submit", getData);
 
