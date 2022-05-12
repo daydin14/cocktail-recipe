@@ -5,8 +5,7 @@ const $drinkName = $("#drink");
 const $instructions = $("#instructions");
 const $image = $("#image");
 const $drinkIngredients = $("#ingredients");
-
-const $input = $(`input[type="text"]`);
+// const $input = $(`input[type="text"]`);
 const $randomButton = $("#rand");
 
 $randomButton.on("click", getData);
@@ -65,3 +64,12 @@ function getIngredients(data) {
     }
   }
 }
+
+// function organizeInstructions(data) {
+//   let instructions = data.drinks[0].strInstructions;
+//   let arrInst = instructions.map(function(instructions) {
+//     if(instructions === ".") {
+//       arrInst.splice()
+//     }
+//   })
+// }
