@@ -20,7 +20,6 @@ function getData(event) {
       $drinkName.text(data.drinks[0].strDrink);
       $instructions.text(data.drinks[0].strInstructions);
       $image.attr("src", data.drinks[0].strDrinkThumb);
-
       getIngredients(data);
     },
     function (error) {
