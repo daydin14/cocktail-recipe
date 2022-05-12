@@ -21,8 +21,7 @@ function getData(event) {
       $instructions.text(data.drinks[0].strInstructions);
       $image.attr("src", data.drinks[0].strDrinkThumb);
 
-      $drinkIngredients.text(getIngredients(data));
-      console.log($drinkIngredients)
+      getIngredients(data);
     },
     function (error) {
       console.log("Something is wrong");
@@ -32,29 +31,39 @@ function getData(event) {
 }
 
 function getIngredients(data) {
-  let ingredients = [];
-  ingredients.push(data.drinks[0].strIngredient1);
-  ingredients.push(data.drinks[0].strIngredient2);
-  ingredients.push(data.drinks[0].strIngredient3);
-  ingredients.push(data.drinks[0].strIngredient4);
-  ingredients.push(data.drinks[0].strIngredient5);
-  ingredients.push(data.drinks[0].strIngredient6);
-  ingredients.push(data.drinks[0].strIngredient7);
-  ingredients.push(data.drinks[0].strIngredient8);
-  ingredients.push(data.drinks[0].strIngredient9);
-  ingredients.push(data.drinks[0].strIngredient10);
-  ingredients.push(data.drinks[0].strIngredient11);
-  ingredients.push(data.drinks[0].strIngredient12);
-  ingredients.push(data.drinks[0].strIngredient13);
-  ingredients.push(data.drinks[0].strIngredient14);
-  ingredients.push(data.drinks[0].strIngredient15);
+  // let ingredients = [];
+  // ingredients.push(data.drinks[0].strIngredient1);
+  // ingredients.push(data.drinks[0].strIngredient2);
+  // ingredients.push(data.drinks[0].strIngredient3);
+  // ingredients.push(data.drinks[0].strIngredient4);
+  // ingredients.push(data.drinks[0].strIngredient5);
+  // ingredients.push(data.drinks[0].strIngredient6);
+  // ingredients.push(data.drinks[0].strIngredient7);
+  // ingredients.push(data.drinks[0].strIngredient8);
+  // ingredients.push(data.drinks[0].strIngredient9);
+  // ingredients.push(data.drinks[0].strIngredient10);
+  // ingredients.push(data.drinks[0].strIngredient11);
+  // ingredients.push(data.drinks[0].strIngredient12);
+  // ingredients.push(data.drinks[0].strIngredient13);
+  // ingredients.push(data.drinks[0].strIngredient14);
+  // ingredients.push(data.drinks[0].strIngredient15);
 
-  console.log(ingredients);
+  // console.log(ingredients);
 
-  let filteredIngredients = ingredients.map(function(ingredient) {
-    if (ingredient != null) {
-      return ingredient;
+  // let filteredIngredients = ingredients.map(function(ingredient) {
+  //   if (ingredient != null) {
+  //     return ingredient;
+  //   }
+  // });
+  // return filteredIngredients;
+
+  // console.log(data);
+  $drinkIngredients.empty();
+  for( let i = 1; i < 16; i++ ) {
+    // console.log(data.drinks[0][`strIngredient1`]);
+    if(data ? data.drinks[0][`strIngredient${i}`] : null != "null") {
+      $drinkIngredients.append(data.drinks[0][`strIngredient${i}`] + ", ");
     }
-  });
-  return filteredIngredients;
+  }
 }
+
