@@ -14,7 +14,7 @@ $randomButton.on("click", getData);
 // Function to connect to api and get a random drink and display it once a form is submitted
 function getData(event) {
   event.preventDefault();
-//   const userInput = $input.val();
+  //   const userInput = $input.val();
   $.ajax(randomUrl).then(
     function (data) {
       $drinkName.text(data.drinks[0].strDrink);
@@ -26,7 +26,7 @@ function getData(event) {
       console.log("Something is wrong");
       console.log(error);
     }
-  )
+  );
 }
 
 function getIngredients(data) {
@@ -58,11 +58,10 @@ function getIngredients(data) {
 
   // console.log(data);
   $drinkIngredients.empty();
-  for( let i = 1; i < 16; i++ ) {
+  for (let i = 1; i < 16; i++) {
     // console.log(data.drinks[0][`strIngredient1`]);
-    if(data ? data.drinks[0][`strIngredient${i}`] : null != "null") {
+    if (data ? data.drinks[0][`strIngredient${i}`] : null != "null") {
       $drinkIngredients.append(data.drinks[0][`strIngredient${i}`] + ", ");
     }
   }
 }
-
