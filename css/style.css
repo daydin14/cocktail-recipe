@@ -4,7 +4,7 @@ body {
   /* https://images.pexels.com/photos/1037999/pexels-photo-1037999.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 */
   /* https://images.pexels.com/photos/4677665/pexels-photo-4677665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2*/
   /*  */
-  color: orange;
+  color: crimson;
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 100vh;
@@ -36,12 +36,39 @@ nav button {
   text-decoration: none;
   color: orange;
 }
+#content {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 4fr;
+  grid-template-areas:
+    "image info"
+    "instructions instructions";
+  grid-gap: 1rem;
+}
 #image {
   max-width: 350px;
   max-height: 350px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 70px; */
   margin: auto;
+  grid-area: "image";
+  padding: 5%;
+  padding-left: 10%;
+}
+#info {
+  padding: 50% 20%;
+}
+#instructions {
+  grid-area: "instructions";
+  /* text-align: center;
+  width: 100%; */
+}
+@media only screen and (max-width: 550px) {
+  #content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    grid-template-areas: "image" "drink" "ingredients" "instructions";
+  }
 }
