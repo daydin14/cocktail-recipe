@@ -21,9 +21,15 @@ First Draft WireFrame for the application:
 
 ![wireframe](https://user-images.githubusercontent.com/22377881/168182358-432365af-4de9-462b-9b95-629c6cecd12b.PNG)
 
-Screenshot of Application:
+Screenshots of Application:
+
+Web View:
+
+<img width="704" alt="Screen Shot 2022-05-13 at 9 44 04 AM" src="https://user-images.githubusercontent.com/22377881/168297067-6d28dc3e-8fb1-4f17-a0df-d811701666ba.png">
+Mobile View:
 
 
+<img width="485" alt="Screen Shot 2022-05-13 at 9 47 01 AM" src="https://user-images.githubusercontent.com/22377881/168297537-954f50c9-7deb-4e79-bbbe-6765450ab037.png">
 
 
 Netlify Application Link: https://davesdrinkgen.netlify.app/
