@@ -37,3 +37,6 @@ Netlify Application Link: https://davesdrinkgen.netlify.app/
 Instructions: The only working button is the RandomDrink button on the top in the nav bar. Use only that button.
 
 Future Enhancements:
+Update other function buttons
+Create a save folder for favorite drinks
+Make application more user friendly for bartenders and weekend users
