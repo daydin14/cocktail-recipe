@@ -40,3 +40,9 @@ Future Enhancements:
 Update other function buttons
 Create a save folder for favorite drinks
 Make application more user friendly for bartenders and weekend users
+
+
+<Strong><h3>Shout Out</h3></Strong>
+<p>Thank you for helping me throuhgout this project</p>
+Arnaud Cavalletto <br/>
+Iyana Marquez
